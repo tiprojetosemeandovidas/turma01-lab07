@@ -1,100 +1,111 @@
 :root {
-    --gold: #D4AF37;
-    --dark-ivory: #ECE5DB;
-    --deep-black: #1A1A1A;
-    --soft-gray: #7A7A7A;
+    --marrom-claro: #A68D7B;
+    --bege-lushe: #F2EBE4;
+    --branco-puro: #FFFFFF;
+    --ouro: #D4AF37;
+    --grafite: #2C2C2C;
 }
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-    background-color: var(--dark-ivory);
-    color: var(--deep-black);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bege-lushe);
+    color: var(--grafite);
     line-height: 1.6;
 }
 
-h1, h2, h3 { font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 2px; }
+h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; }
 
-/* Hero Section com Background de Impacto */
-.hero {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=1500') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0 8%;
-}
-
-.overlay {
+/* Textura de Mármore para Backgrounds */
+.marble-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+    background-image: url('https://www.transparenttextures.com/patterns/marble-similar.png'); /* Textura sutil */
+    opacity: 0.3;
+    z-index: 1;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-    color: white;
+/* Header de Luxo */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 2rem 5%;
+    z-index: 1000;
+    transition: 0.5s;
 }
 
-.tag { color: var(--gold); text-transform: uppercase; font-weight: 500; font-size: 0.8rem; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 700; letter-spacing: 5px; color: var(--ouro); }
+ul { display: flex; list-style: none; gap: 30px; }
+a { text-decoration: none; color: var(--marrom-claro); font-size: 0.8rem; text-transform: uppercase; font-weight: 600; }
 
-.hero h1 { font-size: 3.5rem; margin: 1rem 0; }
+/* Hero com foco em Empoderamento */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+                url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    padding: 0 10%;
+}
 
-.btn-gold {
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+.gold-tag { color: var(--ouro); text-transform: uppercase; font-size: 0.9rem; font-weight: 600; border-left: 2px solid var(--ouro); padding-left: 10px; }
+.hero h1 { font-size: 3.5rem; color: var(--grafite); margin: 20px 0; }
+.gold-text { color: var(--ouro); font-style: italic; }
+
+/* Botão com efeito mármore e borda dourada */
+.btn-marble {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    background: var(--gold);
-    color: white;
-    text-decoration: none;
-    margin-top: 2rem;
-    transition: 0.3s;
+    padding: 15px 40px;
+    border: 1px solid var(--ouro);
+    background: var(--branco-puro);
+    color: var(--ouro);
+    font-weight: 600;
+    transition: 0.4s;
+    margin-top: 20px;
 }
 
-.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.btn-marble:hover {
+    background: var(--ouro);
+    color: white;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
 
-/* Grid de Serviços */
-.services-grid { padding: 100px 8%; text-align: center; }
+/* Floating Action Button */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--ouro);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    z-index: 999;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
 
-.cards-container {
+/* Cards de Serviços */
+.service-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    padding: 50px 10%;
 }
 
 .card {
-    background: white;
-    padding: 2rem;
-    transition: 0.4s;
-    border-bottom: 3px solid transparent;
+    background: var(--branco-puro);
+    padding: 20px;
+    border-bottom: 3px solid var(--bege-lushe);
+    transition: 0.3s;
 }
 
-.card:hover { border-bottom: 3px solid var(--gold); }
-
-.card-img {
-    height: 250px;
-    margin-bottom: 1.5rem;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Simulação de imagens baseadas no Design System do projeto */
-.hair { background-image: url('https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000'); }
-.nails { background-image: url('https://images.unsplash.com/photo-1604654894610-df4906687ec0?q=80&w=1000'); }
-.makeup { background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000'); }
-
-.about-lushe {
-    background: var(--deep-black);
-    color: white;
-    padding: 100px 8%;
-    text-align: center;
-}
-
-blockquote {
-    font-size: 1.5rem;
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    margin-top: 2rem;
-    font-style: italic;
-}
+.card:hover { border-bottom-color: var(--ouro); transform: translateY(-10px); }
+.card-img { height: 300px; background-size: cover; margin-bottom: 20px; }
+.hair { background-image: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80'); }
+.nails { background-image: url('https://images.unsplash.com/photo-1604654894610-df4906687ec0?q=80'); }
+.makeup { background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80'); }
