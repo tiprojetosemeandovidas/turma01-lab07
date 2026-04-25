@@ -1,28 +1,15 @@
-
-// Inicialização do AOS (Animate on Scroll)
-AOS.init({
-    once: true,
-    mirror: false
-});
-
-// Efeito de mudança na Navbar ao rolar
+// Efeito de Header ao Scroll
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(10, 10, 10, 0.95)';
-        nav.style.padding = '1rem 5%';
-    } else {
-        nav.style.background = 'transparent';
-        nav.style.padding = '2rem 5%';
-    }
+    const header = document.querySelector('header');
+    header.style.background = window.scrollY > 50 ? 'rgba(249, 247, 245, 0.95)' : 'transparent';
+    header.style.boxShadow = window.scrollY > 50 ? '0 2px 10px rgba(0,0,0,0.05)' : 'none';
 });
 
-// Smooth Scroll para links internos
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Configuração do ScrollReveal para movimentos fluidos
+ScrollReveal().reveal('.reveal', {
+    distance: '50px',
+    duration: 1000,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200,
+    origin: 'bottom'
 });
