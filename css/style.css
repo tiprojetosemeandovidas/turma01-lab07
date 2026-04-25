@@ -1,3 +1,84 @@
+/* Seção de Produtos */
+.products-section {
+    padding: 100px 10%;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                url('https://www.transparenttextures.com/patterns/marble-similar.png');
+    text-align: center;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.product-item {
+    border: 1px solid var(--areia);
+    padding: 40px 20px;
+    transition: 0.5s;
+    background: var(--branco-puro);
+}
+
+.product-item:hover {
+    border-color: var(--ouro);
+    box-shadow: 0 10px 30px rgba(166, 141, 123, 0.1);
+}
+
+.brand {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ouro);
+    margin-bottom: 10px;
+}
+
+/* Formulário de Agendamento */
+.booking-section {
+    background: var(--grafite);
+    color: var(--marfim);
+    padding: 100px 10%;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-form input, .booking-form select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--marrom-claro);
+    padding: 15px 5px;
+    color: var(--marfim);
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--ouro);
+    color: white;
+    border: none;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-submit:hover {
+    background: var(--marrom-claro);
+}
 :root {
     --marrom-claro: #A68D7B;
     --bege-lushe: #F2EBE4;
