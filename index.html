@@ -1,34 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lushe Beauty | O Santuário da Mulher Contemporânea</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
 
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content reveal">
+            <span class="tag">Exclusividade & Design</span>
+            <h1>Sua melhor versão <br>é a nossa obra de arte.</h1>
+            <p>Onde a sofisticação da arquitetura Lushe encontra o poder da sua beleza.</p>
+            <a href="#agendamento" class="btn-gold">Agendar Experiência</a>
+        </div>
+    </section>
 
-/* Efeito de Smooth Scroll para navegação interna */
-html {
-    scroll-behavior: smooth;
-}
+    <section id="servicos" class="services-grid">
+        <div class="section-title reveal">
+            <h2>Serviços de Alta Performance</h2>
+            <p>Curadoria completa para a mulher que não aceita menos que a perfeição.</p>
+        </div>
 
-/* Estilização do Scrollbar para não quebrar o design */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: var(--marfim);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--ouro);
-    border-radius: 10px;
-}
+        <div class="cards-container">
+            <div class="card reveal">
+                <div class="card-img hair"></div>
+                <h3>Hairstyle & Color</h3>
+                <p>Do loiro platinado impecável ao corte que define sua personalidade. Técnicas avançadas para fios saudáveis e luxuosos.</p>
+            </div>
 
-/* Transição suave nas seções */
-section {
-    opacity: 1;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
+            <div class="card reveal">
+                <div class="card-img nails"></div>
+                <h3>Nail Spa de Luxo</h3>
+                <p>Blindagens, alongamentos e esmaltação premium. Suas mãos refletem o seu poder.</p>
+            </div>
 
-/* Efeito de hover nas imagens de arquitetura */
-.service-img {
-    overflow: hidden;
-    transition: 0.6s;
-}
-.service-img:hover {
-    transform: scale(1.02);
-    filter: saturate(1.1);
-}
+            <div class="card reveal">
+                <div class="card-img makeup"></div>
+                <h3>Makeup Design</h3>
+                <p>Maquiagem que realça traços sem mascarar sua essência. O visual perfeito para eventos ou reuniões de alto impacto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-lushe reveal">
+        <div class="about-text">
+            <h2>O Salão: Um Refúgio Arquitetônico</h2>
+            <p>Inspirado no projeto premiado de Roby Macedo, o **Lushe Beauty** foi concebido sob o conceito de curvas orgânicas e tons minerais. Cada ângulo foi planejado para oferecer conforto térmico, acústico e visual.</p>
+            <blockquote>"Beleza é o equilíbrio entre o espaço que você habita e a imagem que você projeta."</blockquote>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
