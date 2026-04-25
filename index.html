@@ -1,60 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Premium | Design & Estratégia Digital</title>
+    <title>Lushe Beauty | Estética de Alta Performance</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">STUDIO<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#about">O Studio</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#contact" class="btn-cta">Orçamento</a></li>
-        </ul>
-    </nav>
-
-    <header id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <span class="subtitle">Design que converte, estética que vende.</span>
-            <h1>TRANSFORMAMOS VISÃO EM <br> <span class="highlight">EXPERIÊNCIA DIGITAL.</span></h1>
-            <p>Criamos ecossistemas digitais de alto padrão para marcas que não aceitam o comum.</p>
-            <div class="hero-btns">
-                <a href="#services" class="btn-primary">Ver Projetos</a>
-                <a href="#contact" class="btn-secondary">Falar com Especialista</a>
-            </div>
-        </div>
+    <header id="header">
+        <nav>
+            <div class="logo">LUSHE</div>
+            <ul>
+                <li><a href="#conceito">Conceito</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendamento" class="btn-cta">Reservar Experiência</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="text-block" data-aos="fade-right">
-                    <h2>Nossa Filosofia</h2>
-                    <p>Não entregamos apenas sites. Construímos autoridade. No mercado premium, cada pixel conta uma história de exclusividade.</p>
-                </div>
-                <div class="stats-block" data-aos="fade-left">
-                    <div class="stat-item">
-                        <h3>+150</h3>
-                        <p>Projetos Entregues</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>Design Autoral</p>
-                    </div>
-                </div>
-            </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="reveal">Onde a arquitetura encontra o <br><span>seu bem-estar.</span></h1>
+            <p class="reveal">Um refúgio de sofisticação projetado para realçar sua essência. O Lushe Beauty une design contemporâneo e cuidados de elite para ele e para ela.</p>
+            <a href="#agendamento" class="main-button reveal">Descubra o Lushe</a>
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <section id="conceito" class="split-section">
+        <div class="image-container reveal">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1000" alt="Ambiente Lushe Beauty">
+        </div>
+        <div class="text-container reveal">
+            <h2>Design que inspira, cuidado que transforma.</h2>
+            <p>Inspirado nas curvas orgânicas da arquitetura moderna, nosso espaço foi criado para ser mais que um salão: é um santuário de autoconhecimento.</p>
+        </div>
+    </section>
+
     <script src="js/script.js"></script>
 </body>
 </html>
